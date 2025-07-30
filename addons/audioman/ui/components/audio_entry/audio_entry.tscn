@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://pedovnonto0i"]
+
+[ext_resource type="Script" uid="uid://dv6rmi54l7kuc" path="res://addons/audioman/ui/components/audio_entry/audio_entry.gd" id="1_8q0yy"]
+
+[node name="AudioEntry" type="VBoxContainer" node_paths=PackedStringArray("loaded_audio_label", "delete_button", "container")]
+custom_minimum_size = Vector2(0, 30)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_8q0yy")
+loaded_audio_label = NodePath("HBoxContainer/Label")
+delete_button = NodePath("HBoxContainer/DeleteBtn")
+container = NodePath("HBoxContainer")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "New Audio File"
+
+[node name="Whitespace" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "‎"
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="DeleteBtn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2

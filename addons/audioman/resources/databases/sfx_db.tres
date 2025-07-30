@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AudioManDatabase" load_steps=3 format=3 uid="uid://b3ks2ei5p2pxk"]
+
+[ext_resource type="Script" uid="uid://bq6m7ypympyl5" path="res://addons/audioman/scripts/resources/database.gd" id="1_35psm"]
+[ext_resource type="AudioStream" uid="uid://gcfjh1kmrop3" path="res://audio/sfx/page_flip.wav" id="1_kiue1"]
+
+[resource]
+script = ExtResource("1_35psm")
+version = 1
+data = {
+"cb1": ExtResource("1_kiue1"),
+"cb2": null,
+"cb3": null
+}
+metadata/_custom_type_script = "uid://bq6m7ypympyl5"

@@ -1,0 +1,30 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="AudioMan"
+config/description="Godot sound management done simple & efficient"
+config/version="0.1"
+run/main_scene="uid://dofc55keb7u0c"
+config/features=PackedStringArray("4.4")
+config/icon="uid://dy266wb5knscs"
+
+[autoload]
+
+AudioManager="*res://addons/audioman/scripts/managers/audio_manager.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/audioman/plugin.cfg")
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.0392157, 0.0392157, 0.0392157, 1)

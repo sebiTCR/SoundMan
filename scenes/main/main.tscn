@@ -1,0 +1,201 @@
+[gd_scene load_steps=12 format=3 uid="uid://dofc55keb7u0c"]
+
+[ext_resource type="Script" uid="uid://cjy8ix2ray34n" path="res://addons/audioman/ui/external/sfx_button.gd" id="1_hyk8p"]
+[ext_resource type="Script" uid="uid://qipwmjip2w05" path="res://scenes/main/main.gd" id="1_k2fmo"]
+[ext_resource type="Script" uid="uid://pjehjo2m67e6" path="res://scenes/main/slideshow.gd" id="2_b1x3f"]
+[ext_resource type="Texture2D" uid="uid://cgb2sdmei3uok" path="res://textures/slides/SM_1.png" id="2_iuonh"]
+[ext_resource type="Texture2D" uid="uid://cm6m05mhf8oes" path="res://textures/slides/SM_2.png" id="3_6q06x"]
+[ext_resource type="Texture2D" uid="uid://dl7pv5t71vv7i" path="res://textures/icons/arrow.svg" id="4_a8run"]
+[ext_resource type="FontFile" uid="uid://2yumoiiky53l" path="res://addons/audioman/fonts/Lexend.ttf" id="4_ow5a4"]
+[ext_resource type="Texture2D" uid="uid://bucup0slw0cl1" path="res://textures/slides/SM_0.png" id="5_ouso4"]
+[ext_resource type="Texture2D" uid="uid://db6jc80ei4v7f" path="res://textures/slides/SM_3.PNG" id="7_a8run"]
+[ext_resource type="Texture2D" uid="uid://rewwuwa0tq11" path="res://textures/slides/SM_4.png" id="8_ouso4"]
+[ext_resource type="Texture2D" uid="uid://cjxopren8044h" path="res://textures/slides/SM_5.png" id="9_blune"]
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("slide_logo")]
+script = ExtResource("1_k2fmo")
+slide_logo = NodePath("CanvasLayer/VBoxContainer/TextureRect")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" node_paths=PackedStringArray("backward_button", "forward_button", "slides")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_b1x3f")
+backward_button = NodePath("")
+forward_button = NodePath("")
+slides = [NodePath("HBoxContainer/Slide1"), NodePath("HBoxContainer/Slide2"), NodePath("HBoxContainer/Slide2"), NodePath("HBoxContainer/Slide3"), NodePath("HBoxContainer/Slide4"), NodePath("HBoxContainer/Slide5")]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("2_iuonh")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Backward" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "   "
+flat = true
+script = ExtResource("1_hyk8p")
+pressed_sfx_id = "Click"
+metadata/_custom_type_script = "uid://cjy8ix2ray34n"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Backward"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_a8run")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label2" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " "
+
+[node name="Slide1" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Slide1"]
+layout_mode = 2
+texture = ExtResource("5_ouso4")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Slide2" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Slide2"]
+layout_mode = 2
+texture = ExtResource("3_6q06x")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SFXButton" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer/Slide2/TextureRect"]
+layout_mode = 2
+anchor_left = 0.406
+anchor_top = 0.445
+anchor_right = 0.595
+anchor_bottom = 0.559
+offset_left = 0.271973
+offset_top = 0.209991
+offset_right = -0.360046
+offset_bottom = -1.89801
+theme_override_colors/font_color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+theme_override_fonts/font = ExtResource("4_ow5a4")
+theme_override_font_sizes/font_size = 32
+flat = true
+script = ExtResource("1_hyk8p")
+pressed_sfx_id = "cb1"
+metadata/_custom_type_script = "uid://cjy8ix2ray34n"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/VBoxContainer/HBoxContainer/Slide2/TextureRect/SFXButton"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("4_ow5a4")
+theme_override_fonts/mono_font = ExtResource("4_ow5a4")
+theme_override_fonts/bold_font = ExtResource("4_ow5a4")
+theme_override_font_sizes/bold_italics_font_size = 32
+bbcode_enabled = true
+text = "[center][wave] Press Me [/wave][/center]"
+fit_content = true
+
+[node name="Slide3" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Slide3"]
+layout_mode = 2
+texture = ExtResource("7_a8run")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Slide4" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Slide4"]
+layout_mode = 2
+texture = ExtResource("8_ouso4")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Slide5" type="MarginContainer" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Slide5"]
+layout_mode = 2
+texture = ExtResource("9_blune")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = " "
+
+[node name="Forward" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "   "
+flat = true
+script = ExtResource("1_hyk8p")
+pressed_sfx_id = "Click"
+metadata/_custom_type_script = "uid://cjy8ix2ray34n"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Forward"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_a8run")
+expand_mode = 1
+stretch_mode = 5
+flip_h = true
