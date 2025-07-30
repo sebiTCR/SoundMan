@@ -1,7 +1,7 @@
 @tool
 extends EditorPlugin
 
-const main_menu = preload("res://addons/audioman/ui/main_menu/main_menu.tscn")
+const main_menu = preload("res://addons/soundman/ui/main_menu/main_menu.tscn")
 const AUTOLOAD_NAME = "SoundManager"
 
 var main_menu_instance: Control
@@ -32,7 +32,7 @@ func _get_plugin_icon():
 
 
 func _enable_plugin():
-	add_autoload_singleton(AUTOLOAD_NAME, "res://addons/audioman/scripts/managers/sound_manager.gd")
+	add_autoload_singleton(AUTOLOAD_NAME, "res://addons/soundman/scripts/managers/sound_manager.gd")
 
 
 func _disable_plugin():

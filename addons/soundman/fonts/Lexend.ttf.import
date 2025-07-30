@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://2yumoiiky53l"
-path="res://.godot/imported/Lexend.ttf-b9677f522f37257624b280083bf8a1e9.fontdata"
+path="res://.godot/imported/Lexend.ttf-cc35d50fd25164348dde318f625d07ce.fontdata"
 
 [deps]
 
-source_file="res://addons/audioman/fonts/Lexend.ttf"
-dest_files=["res://.godot/imported/Lexend.ttf-b9677f522f37257624b280083bf8a1e9.fontdata"]
+source_file="res://addons/soundman/fonts/Lexend.ttf"
+dest_files=["res://.godot/imported/Lexend.ttf-cc35d50fd25164348dde318f625d07ce.fontdata"]
 
 [params]
 

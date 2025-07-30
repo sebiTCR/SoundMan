@@ -19,11 +19,11 @@ config/icon="uid://dy266wb5knscs"
 
 [autoload]
 
-SoundManager="*res://addons/audioman/scripts/managers/sound_manager.gd"
+SoundManager="*res://addons/soundman/scripts/managers/sound_manager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/audioman/plugin.cfg")
+enabled=PackedStringArray("res://addons/soundman/plugin.cfg")
 
 [rendering]
 

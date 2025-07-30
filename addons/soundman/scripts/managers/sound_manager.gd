@@ -79,4 +79,4 @@ func _ready():
 
 
 func _enter_tree() -> void:
-	database = preload("res://addons/audioman/resources/databases/sfx_db.tres")
+	database = preload("res://addons/soundman/resources/databases/sfx_db.tres")
