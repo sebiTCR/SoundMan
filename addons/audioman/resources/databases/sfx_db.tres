@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="AudioManDatabase" load_steps=3 format=3 uid="uid://b3ks2ei5p2pxk"]
+[gd_resource type="Resource" script_class="SoundManDatabase" load_steps=5 format=3 uid="uid://b3ks2ei5p2pxk"]
 
 [ext_resource type="Script" uid="uid://bq6m7ypympyl5" path="res://addons/audioman/scripts/resources/database.gd" id="1_35psm"]
-[ext_resource type="AudioStream" uid="uid://gcfjh1kmrop3" path="res://audio/sfx/page_flip.wav" id="1_kiue1"]
+[ext_resource type="AudioStream" uid="uid://bnh07ed4ml4a4" path="res://audio/sfx/click_1.wav" id="1_m6mij"]
+[ext_resource type="AudioStream" uid="uid://gbet53y6cn47" path="res://audio/sfx/click_2.wav" id="2_ap5sj"]
+[ext_resource type="AudioStream" uid="uid://og0kbanc1kpl" path="res://audio/sfx/press_me.wav" id="3_yfwn5"]
 
 [resource]
 script = ExtResource("1_35psm")
 version = 1
 data = {
-"cb1": ExtResource("1_kiue1"),
-"cb2": null,
-"cb3": null
+"Click1": ExtResource("1_m6mij"),
+"Click2": ExtResource("2_ap5sj"),
+"Press Me": ExtResource("3_yfwn5")
 }
 metadata/_custom_type_script = "uid://bq6m7ypympyl5"

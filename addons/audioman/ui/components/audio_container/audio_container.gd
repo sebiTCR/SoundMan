@@ -24,7 +24,7 @@ func _on_add():
 	_creation_dialogue_instance.popup_centered()
 	audio_name = await _creation_dialogue_instance.confirm
 	entry.set_audio_name(audio_name)
-	AudioManager.create_audio_entry(audio_name)
+	SoundManager.create_audio_entry(audio_name)
 	
 	container.add_child(entry)
 
@@ -32,10 +32,10 @@ func _on_add():
 func _refresh():
 	for n in container.get_children():
 		n.queue_free()
-	for k in AudioManager.get_entries():
+	for k in SoundManager.get_entries():
 		var entry = _audio_entry.instantiate()
 		container.add_child(entry)
-		entry.set_existing_data(k, AudioManager.get_stream(k))
+		entry.set_existing_data(k, SoundManager.get_stream(k))
 
 #endregion
 

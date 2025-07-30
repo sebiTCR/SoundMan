@@ -1,7 +1,7 @@
 @tool
 extends Node
 
-@export var database: AudioManDatabase
+@export var database: SoundManDatabase
 
 var _audio_database: Dictionary = {}
 var _audio_node_container: Node = Node.new()
@@ -22,6 +22,8 @@ func update_audio_stream(audio_name: String, stream: AudioStream):
 func play(audio_name: String):
 	if _audio_database.has(audio_name):
 		_audio_database[audio_name].play()
+		return
+	printerr("No sound registered as: " + audio_name)
 
 
 ##Delets an entry from the database

@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="AudioMan"
+config/name="SoundMan"
 config/description="Godot sound management done simple & efficient"
 config/version="0.1"
 run/main_scene="uid://dofc55keb7u0c"
@@ -19,7 +19,7 @@ config/icon="uid://dy266wb5knscs"
 
 [autoload]
 
-AudioManager="*res://addons/audioman/scripts/managers/audio_manager.gd"
+SoundManager="*res://addons/audioman/scripts/managers/sound_manager.gd"
 
 [editor_plugins]
 

@@ -1,4 +1,4 @@
-class_name AudioManDatabase
+class_name SoundManDatabase
 extends Resource
 
 @export var version: int = 1

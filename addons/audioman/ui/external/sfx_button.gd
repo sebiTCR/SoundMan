@@ -7,4 +7,4 @@ extends Button
 
 
 func _enter_tree() -> void:
-	connect("pressed", func(): AudioManager.play(pressed_sfx_id))
+	connect("pressed", func(): SoundManager.play(pressed_sfx_id))

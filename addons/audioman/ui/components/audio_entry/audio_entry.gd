@@ -39,11 +39,11 @@ func _create_picker():
 #region Signals
 
 func _on_resource_change(resource: AudioStream):
-	AudioManager.update_audio_stream(_audio_name, resource)
+	SoundManager.update_audio_stream(_audio_name, resource)
 
 
 func _on_delete():
-	AudioManager.delete(_audio_name)
+	SoundManager.delete(_audio_name)
 	queue_free()
 
 

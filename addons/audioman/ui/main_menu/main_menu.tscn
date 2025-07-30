@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cvgnjbobjm62d"]
+[gd_scene load_steps=3 format=3 uid="uid://cvgnjbobjm62d"]
 
+[ext_resource type="FontFile" uid="uid://2yumoiiky53l" path="res://addons/audioman/fonts/Lexend.ttf" id="2_hyyms"]
 [ext_resource type="PackedScene" uid="uid://dh48k286vwue8" path="res://addons/audioman/ui/components/audio_container/audio_container.tscn" id="2_uqhft"]
 
 [node name="MainMenu" type="MarginContainer"]
@@ -17,21 +18,27 @@ theme_override_constants/margin_bottom = 15
 
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 2
-current_tab = 0
+current_tab = 1
 
 [node name="SFXs" parent="TabContainer" instance=ExtResource("2_uqhft")]
+visible = false
 layout_mode = 2
 
 [node name="About" type="CenterContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/About"]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_hyyms")
+theme_override_fonts/bold_italics_font = ExtResource("2_hyyms")
+theme_override_font_sizes/bold_italics_font_size = 32
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_font_size = 42
 bbcode_enabled = true
-text = "[b]AudioMan[/b]
-Simple Audio Manager
+text = "[b][color=#e03616ff]Sound[/color]Man[/b]
+[b]GODOT SOUND MANAGEMENT[/b]
+done [color=#e03616ff]easy[/color] & [color=#e03616ff]efficient[/color]
 
 Developed by: SebiTCR
 Current status: [u]Alpha[/u]"

@@ -25,8 +25,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_b1x3f")
-backward_button = NodePath("")
-forward_button = NodePath("")
+backward_button = NodePath("HBoxContainer/Backward")
+forward_button = NodePath("HBoxContainer/Forward")
 slides = [NodePath("HBoxContainer/Slide1"), NodePath("HBoxContainer/Slide2"), NodePath("HBoxContainer/Slide2"), NodePath("HBoxContainer/Slide3"), NodePath("HBoxContainer/Slide4"), NodePath("HBoxContainer/Slide5")]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer"]
@@ -44,11 +44,12 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Backward" type="Button" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+visible = false
 layout_mode = 2
 text = "   "
 flat = true
 script = ExtResource("1_hyk8p")
-pressed_sfx_id = "Click"
+pressed_sfx_id = "Click1"
 metadata/_custom_type_script = "uid://cjy8ix2ray34n"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Backward"]
@@ -110,7 +111,7 @@ theme_override_fonts/font = ExtResource("4_ow5a4")
 theme_override_font_sizes/font_size = 32
 flat = true
 script = ExtResource("1_hyk8p")
-pressed_sfx_id = "cb1"
+pressed_sfx_id = "Press Me"
 metadata/_custom_type_script = "uid://cjy8ix2ray34n"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/VBoxContainer/HBoxContainer/Slide2/TextureRect/SFXButton"]
@@ -185,7 +186,7 @@ layout_mode = 2
 text = "   "
 flat = true
 script = ExtResource("1_hyk8p")
-pressed_sfx_id = "Click"
+pressed_sfx_id = "Click2"
 metadata/_custom_type_script = "uid://cjy8ix2ray34n"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer/HBoxContainer/Forward"]
