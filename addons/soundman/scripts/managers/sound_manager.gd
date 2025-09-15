@@ -33,7 +33,6 @@ func delete(audio_name: String):
 
 
 func get_entries() -> Array:
-	print("Getting entries")
 	return _audio_database.keys()
 
 
