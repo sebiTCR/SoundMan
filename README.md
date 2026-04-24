@@ -4,6 +4,9 @@
 <p align="center"> Let's <b> <i>simplify</i> </b> the way you use audio! </p>
 </br>
 
+>[!WARNING]
+>Development has been put on pause for an undetermined time.
+
 # Objective
 If you're tired of creating <i>Audio Nodes</i> for everything in Godot 4, <b>Soundman</b> might be the right solution for you. Instead, you can register all of your sounds in one place and play them with a single line of code: 
 
